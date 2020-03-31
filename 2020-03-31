@@ -1,0 +1,16 @@
+# Today I learned
+
+How to mirror a github repository
+
+```zsh
+λ git clone --mirror git@github.com:company/repository.git
+λ cd git@github.com:company/repository.git
+λ git push --mirror git@github.com:company/otherrepo.git
+```
+
+In order for the push to work, `otherrepo.git` must exist.
+When pushing to the new repo, the following error might appear:
+```
+! [remote rejected] refs/pull/1/head -> refs/pull/1/head (deny updating a hidden ref)
+```
+This is likely because a [pull request was opened](https://stackoverflow.com/a/34266401) at the previous repository.
