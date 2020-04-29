@@ -1,0 +1,11 @@
+There is a css pseudo-class called `:root` that does exactly what it says, it matches the root element of your document.
+It will mainly match the `<html>` tag. 
+
+Root is usually a good place to define css variables as follows:
+
+```css
+:root {
+  --theme-color: blue;
+  --theme-main: white
+}
+```
